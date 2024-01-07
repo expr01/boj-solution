@@ -5,6 +5,9 @@ using namespace std;
 
 int main() {
 
+    cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+
     string str;
     // cin >> str은 공백을 포함하지 못하므로
     // 공백을 포함하는 getline() 함수로 처리.
