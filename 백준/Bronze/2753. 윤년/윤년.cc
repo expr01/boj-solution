@@ -5,20 +5,11 @@ using namespace std;
 int main () {
 
     int year;
-    bool isLeapYear = false;
     cin >> year;
 
-    if (year % 4 == 0) {
-        isLeapYear = true;
-        if (year % 100 == 0) {
-            isLeapYear = false;
-        }
-        if (year % 400 == 0) {
-            isLeapYear = true;
-        }
-    }
-
-    cout << isLeapYear;
+    // 윤년은 연도가 4의 배수이면서, 100의 배수가 아닐 때
+    // 또는 400의 배수일 때이다.
+    cout << (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
 
     return 0;
 }   
