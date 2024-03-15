@@ -2,13 +2,13 @@
 
 using namespace std;
 
-int newOperator(const int a, const int b) {
+long long int newOperator(const long long int a, const long long int b) {
     return (a + b) * (a - b);
 }
 
 int main() {
 
-    int a, b;
+    long long int a, b;
     cin >> a >> b;
     cout << newOperator(a, b);
 
