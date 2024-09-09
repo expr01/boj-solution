@@ -1,12 +1,9 @@
-#include <string>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int solution(vector<int> num_list) {
-    int answer = -1;
-    for (int i = 0 ; i < num_list.size(); i++) {
-        if (num_list[i] < 0) return i;
-    }
-    return answer;
+    auto it = find_if(num_list.begin(), num_list.end(), [](int n) { return n < 0; });
+    return (it == num_list.end()) ? -1 : (it - num_list.begin());
 }
