@@ -7,8 +7,6 @@ for i in range(0, numOfCard - 2):
   for j in range(i+1, numOfCard - 1):
     for k in range(j + 1, numOfCard):
       sum = cardNumList[i] + cardNumList[j] + cardNumList[k]
-      if (CardNum < sum):
-        continue
-      elif (answer < sum):
+      if (answer < sum and sum <= CardNum):
         answer = sum
 print(answer)
